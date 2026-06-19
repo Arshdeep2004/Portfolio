@@ -1,9 +1,14 @@
-console.log("JS Connected");
+const popup = document.getElementById("welcomePopup");
+const okBtn = document.getElementById("okBtn");
 
-const skillBoxes = document.querySelectorAll(".skill-box");
+okBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+});
 
-skillBoxes.forEach(box => {
-    box.addEventListener("click", () => {
-        box.classList.toggle("active");
-    });
+okBtn.addEventListener("click", () => {
+    popup.style.opacity = "0";
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 300);
 });
